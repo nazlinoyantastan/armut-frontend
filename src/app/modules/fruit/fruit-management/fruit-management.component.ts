@@ -11,6 +11,7 @@ export class FruitManagementComponent {
     private router: Router,
     private route: ActivatedRoute,
   ){}
+  
   createFruit() {
     this.router.navigate(['create'], { relativeTo: this.route });
   }
