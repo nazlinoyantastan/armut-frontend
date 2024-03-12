@@ -13,6 +13,7 @@ import { AdminMenuComponent } from './core/component/admin-menu/admin-menu.compo
 import { APP_CONFIG } from './app.config';
 import { environment } from '../environments/environment';
 import { urlInterceptor } from './core/interceptor/url.interceptor';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { urlInterceptor } from './core/interceptor/url.interceptor';
       useValue: environment,
     },
     { provide: LOCALE_ID, useValue: 'tr'},
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
